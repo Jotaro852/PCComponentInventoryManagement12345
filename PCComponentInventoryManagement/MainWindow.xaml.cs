@@ -19,14 +19,12 @@ namespace PCComponentInventoryManagement
             LoadComponents();
         }
 
-        // Загрузка компонентов
         private async void LoadComponents()
         {
             var components = await _componentRepository.GetAllComponentsAsync();
             ComponentsDataGrid.ItemsSource = components;
         }
 
-        // Обработчики событий
         private void AddComponentButton_Click(object sender, RoutedEventArgs e)
         {
             var addComponentWindow = new AddComponentWindow();
@@ -52,8 +50,8 @@ namespace PCComponentInventoryManagement
         // Просмотр конфигураций
         private void ViewConfigurationsButton_Click(object sender, RoutedEventArgs e)
         {
-            var viewConfigurationsWindow = new ConfigurationsManagementWindow(_context);
-            viewConfigurationsWindow.ShowDialog();
+            var viewConfigWindow = new ViewConfigurationsWindow(_context);
+            viewConfigWindow.ShowDialog();
         }
     }
 }

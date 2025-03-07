@@ -36,8 +36,8 @@ namespace PCComponentInventoryManagement.Data.Repositories
         public async Task<List<PCConfiguration>> GetAllConfigurationsAsync()
         {
             return await _context.PCConfigurations
-                .Include(c => c.Components)
-                .ThenInclude(cc => cc.Component)
+                .Include(c => c.Components)          // Загружаем компоненты конфигурации
+                .ThenInclude(cc => cc.Component)     // Загружаем связанные компоненты (Component)
                 .ToListAsync();
         }
     }

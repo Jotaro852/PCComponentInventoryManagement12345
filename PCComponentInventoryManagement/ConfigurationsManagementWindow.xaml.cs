@@ -19,17 +19,15 @@ namespace PCComponentInventoryManagement
             InitializeComponent();
             _context = context;
             _repository = new ConfigurationRepository(_context);
-            _ = LoadConfigurationsAsync(); // Запуск асинхронной загрузки
+            _ = LoadConfigurationsAsync();
         }
 
-        // Загрузка конфигураций (возвращает Task)
         private async Task LoadConfigurationsAsync()
         {
             var configurations = await _repository.GetAllConfigurationsAsync();
             ConfigurationsGrid.ItemsSource = configurations;
         }
 
-        // Добавление конфигурации
         private async void AddButton_Click(object sender, RoutedEventArgs e)
         {
             var configWindow = new ConfigurationWindow();
@@ -40,7 +38,6 @@ namespace PCComponentInventoryManagement
             }
         }
 
-        // Удаление конфигурации
         private async void DeleteButton_Click(object sender, RoutedEventArgs e)
         {
             if (ConfigurationsGrid.SelectedItem is PCConfiguration selectedConfig)

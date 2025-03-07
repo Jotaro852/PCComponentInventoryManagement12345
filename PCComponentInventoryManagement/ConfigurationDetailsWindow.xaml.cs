@@ -11,7 +11,7 @@ namespace PCComponentInventoryManagement
         {
             InitializeComponent();
             Configuration = configuration;
-            DataContext = Configuration;
+            DataContext = Configuration; // Привязка данных
         }
     }
 }

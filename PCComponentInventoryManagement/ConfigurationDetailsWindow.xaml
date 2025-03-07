@@ -8,15 +8,23 @@
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
 
-        <TextBlock Grid.Row="0" Text="{Binding Name}" FontSize="16" Margin="0,0,0,10"/>
+        <!-- Название конфигурации -->
+        <TextBlock Grid.Row="0" 
+                   Text="{Binding Name}" 
+                   FontSize="16" 
+                   Margin="0,0,0,10"/>
 
         <!-- Список компонентов -->
         <DataGrid Grid.Row="1" 
                   AutoGenerateColumns="False"
                   ItemsSource="{Binding Components}">
             <DataGrid.Columns>
-                <DataGridTextColumn Header="Компонент" Binding="{Binding Component.Model}" Width="*"/>
-                <DataGridTextColumn Header="Количество" Binding="{Binding QuantityRequired}" Width="120"/>
+                <DataGridTextColumn Header="Модель" 
+                                    Binding="{Binding Component.Model}" 
+                                    Width="*"/>
+                <DataGridTextColumn Header="Количество" 
+                                    Binding="{Binding QuantityRequired}" 
+                                    Width="120"/>
             </DataGrid.Columns>
         </DataGrid>
     </Grid>

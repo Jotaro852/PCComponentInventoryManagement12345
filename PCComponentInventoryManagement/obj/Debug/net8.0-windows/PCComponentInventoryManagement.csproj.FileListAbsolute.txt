@@ -130,3 +130,6 @@ C:\Users\Biostar\RiderProjects\PCComponentInventoryManagement\PCComponentInvento
 C:\Users\Biostar\RiderProjects\PCComponentInventoryManagement\PCComponentInventoryManagement\obj\Debug\net8.0-windows\ref\PCComponentInventoryManagement.dll
 C:\Users\Biostar\RiderProjects\PCComponentInventoryManagement\PCComponentInventoryManagement\obj\Debug\net8.0-windows\ConfigurationDetailsWindow.baml
 C:\Users\Biostar\RiderProjects\PCComponentInventoryManagement\PCComponentInventoryManagement\obj\Debug\net8.0-windows\ConfigurationDetailsWindow.g.cs
+C:\Users\Biostar\RiderProjects\PCComponentInventoryManagement\PCComponentInventoryManagement\obj\Debug\net8.0-windows\PCComponentInventoryManagement.sourcelink.json
+C:\Users\Biostar\RiderProjects\PCComponentInventoryManagement\PCComponentInventoryManagement\obj\Debug\net8.0-windows\ViewConfigurationsWindow.baml
+C:\Users\Biostar\RiderProjects\PCComponentInventoryManagement\PCComponentInventoryManagement\obj\Debug\net8.0-windows\ViewConfigurationsWindow.g.cs
