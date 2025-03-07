@@ -1,0 +1,23 @@
+<Window x:Class="PCComponentInventoryManagement.ConfigurationDetailsWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Детали конфигурации" Height="400" Width="600">
+    <Grid Margin="10">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <TextBlock Grid.Row="0" Text="{Binding Name}" FontSize="16" Margin="0,0,0,10"/>
+
+        <!-- Список компонентов -->
+        <DataGrid Grid.Row="1" 
+                  AutoGenerateColumns="False"
+                  ItemsSource="{Binding Components}">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Компонент" Binding="{Binding Component.Model}" Width="*"/>
+                <DataGridTextColumn Header="Количество" Binding="{Binding QuantityRequired}" Width="120"/>
+            </DataGrid.Columns>
+        </DataGrid>
+    </Grid>
+</Window>

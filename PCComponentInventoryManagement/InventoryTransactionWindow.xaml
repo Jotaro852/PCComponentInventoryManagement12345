@@ -1,0 +1,22 @@
+<Window x:Class="PCComponentInventoryManagement.InventoryTransactionWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Учет операции" Height="250" Width="300">
+    <Grid Margin="10">
+        <StackPanel>
+            <TextBlock Text="Тип операции:" />
+            <ComboBox x:Name="TypeComboBox">
+                <ComboBoxItem Content="Поступление" />
+                <ComboBoxItem Content="Отгрузка" />
+            </ComboBox>
+
+            <TextBlock Text="Модель компонента:" Margin="0,10,0,0" />
+            <ComboBox x:Name="ComponentComboBox" DisplayMemberPath="Model" />
+
+            <TextBlock Text="Количество:" Margin="0,10,0,0" />
+            <TextBox x:Name="QuantityTextBox" />
+
+            <Button Content="Сохранить" Margin="0,20,0,0" Click="SaveButton_Click" />
+        </StackPanel>
+    </Grid>
+</Window>

@@ -1,0 +1,33 @@
+﻿<Window x:Class="PCComponentInventoryManagement.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Управление запасами" Height="450" Width="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <!-- Панель кнопок -->
+        <StackPanel Grid.Row="0" Orientation="Horizontal" Margin="10">
+            <Button Content="Добавить компонент" Click="AddComponentButton_Click" Margin="0,0,10,0"/>
+            <Button Content="Учет операции" Click="InventoryTransactionButton_Click" Margin="0,0,10,0"/>
+            <Button Content="Управление конфигурациями" Click="ManageConfigurationsButton_Click" Margin="0,0,10,0"/>
+            <Button Content="Просмотр конфигураций" Click="ViewConfigurationsButton_Click"/>
+        </StackPanel>
+
+        <!-- Список компонентов -->
+        <DataGrid x:Name="ComponentsDataGrid" 
+                  Grid.Row="1" 
+                  AutoGenerateColumns="False" 
+                  Margin="10">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Название" Binding="{Binding Name}"/>
+                <DataGridTextColumn Header="Тип" Binding="{Binding Type}"/>
+                <DataGridTextColumn Header="Производитель" Binding="{Binding Manufacturer}"/>
+                <DataGridTextColumn Header="Модель" Binding="{Binding Model}"/>
+                <DataGridTextColumn Header="Количество" Binding="{Binding Quantity}"/>
+            </DataGrid.Columns>
+        </DataGrid>
+    </Grid>
+</Window>

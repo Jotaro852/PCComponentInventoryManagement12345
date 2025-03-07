@@ -1,0 +1,29 @@
+<Window x:Class="PCComponentInventoryManagement.ConfigurationsManagementWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Управление конфигурациями" Height="450" Width="800">
+    <Grid Margin="10">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <!-- Кнопки управления -->
+        <StackPanel Orientation="Horizontal" Grid.Row="0">
+            <Button Content="Добавить" Margin="0,0,10,0" Click="AddButton_Click"/>
+            <Button Content="Удалить" Margin="0,0,10,0" Click="DeleteButton_Click"/>
+        </StackPanel>
+
+        <!-- Список конфигураций -->
+        <DataGrid x:Name="ConfigurationsGrid" 
+                  Grid.Row="1" 
+                  AutoGenerateColumns="False" 
+                  CanUserAddRows="False"
+                  SelectionMode="Single">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Название" Binding="{Binding Name}" Width="*"/>
+                <DataGridTextColumn Header="Компонентов" Binding="{Binding Components.Count}" Width="120"/>
+            </DataGrid.Columns>
+        </DataGrid>
+    </Grid>
+</Window>
